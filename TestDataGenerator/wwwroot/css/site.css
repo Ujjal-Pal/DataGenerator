@@ -1,0 +1,138 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/* wwwroot/css/site.css */
+/*.dropdown-container {
+    margin: 20px;
+}
+
+.dropdown-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.dropdown-select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}*/
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 200px;  Adjust width as needed 
+}
+
+input[type=number] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 200px;  Adjust width as needed 
+}
+
+
+/* Container for form elements */
+.form-container {
+    max-width: 400px; /* Adjust container width as needed */
+    margin: 20px auto; /* Center the container and provide margin */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for labels */
+label {
+    display: block; /* Display labels as blocks */
+    margin-bottom: 8px; /* Space between labels and form elements */
+    font-weight: bold;
+}
+
+/* Style for dropdown (select element) */
+select,
+/* Style for text input (input element) */
+input[type=number] {
+    width: 100%; /* Full width within the container */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 15px; /* Space between form elements */
+}
+
+/* Style for button */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Button focus effect */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Hover effect */
+select:hover,
+input[type=number]:hover {
+    border-color: #999;
+}
+
+/* Focus effect */
+select:focus,
+input[type=number]:focus {
+    outline: none;
+    border-color: #66afe9;/* Example color for focus state */
+    box-shadow: 0 0 5px #66afe9; /* Example box shadow for focus state */
+}

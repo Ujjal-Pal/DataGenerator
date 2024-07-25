@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Data Generator Tool.</p>
+</div>
+
+<h1>Select an Option</h1>
+<form asp-action="SubmitForm" method="post">
+    <div class="dropdown-container">
+        <label class="dropdown-label" for="dropdown">Type of Data :</label>
+        <select class="dropdown-select" id="dropdown" name="SelectedValue">
+            @foreach (var option in Model.Options)
+            {
+                <option value="@option.Key">@option.Value</option>
+            }
+        </select>
+        <br />
+        <label class="dropdown-label" for="dropdown">Type of Data Language :</label>
+        <select class="dropdown-select" id="dropdown" name="SelectedLanguage">
+            @foreach (var option in Model.Languages)
+            {
+                <option value="@option">@option</option>
+            }
+        </select>
+        <br />
+        <label class="dropdown-label" for="intValue">Number of Test Data :</label>
+        <input type="number" id="intValue" name="NumberOfData" required>
+    </div>
+    <div>
+        <button class="submit-button" type="submit">Submit</button>
+    </div>
+
+    @if(ViewData["OutputDirectory"] != null)
+    {
+        <div>
+            <label>Check the below folder path for the datasets:</label>
+            @{
+                string path = "file://"+@ViewData["OutputDirectory"];
+            }
+            <a href="@path">@ViewData["OutputDirectory"]</a>
+        </div>
+    }
+
+    @if (ViewData["PythonError"] != null)
+    {
+        <div>
+            <p class="text-danger">Error:</p>
+            <pre>@ViewData["PythonError"]</pre>
+        </div>
+    }
+
+</form>
+
+
